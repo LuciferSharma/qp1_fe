@@ -9,11 +9,14 @@ const UploadCard = () => {
   const {id} = useParams();
 
   useEffect(()=>{
-    fetch
+    
   })
 
   return (
-    <div>uploadCard</div>
+    <div>uploadCard
+
+      
+    </div>
   )
 }
 
