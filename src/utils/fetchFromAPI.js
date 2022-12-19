@@ -22,8 +22,21 @@ const assemblyApi= axios.create({
     }
   }
 
-  function FetchFromAPI() {
+  // function FetchFromAPI() {
 
-  const [audioDetails, setAudioDetails] = useState(initialState);
+  // const [audioDetails, setAudioDetails] = useState(initialState);
   
+  // }
+
+
+  //options will have the S3 data of the specific user
+  const options ={
+    
+  }
+
+  export const fetchFromAPI = async (url) => {
+    const {data} =await axios.get(`${BASE_URL}/${url}`, options);
+    
+    return data;
+    
   }

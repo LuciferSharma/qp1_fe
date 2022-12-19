@@ -5,10 +5,13 @@ import {Box,Stack, TextField} from '@mui/material';
 
 const App = () => (
   <BrowserRouter>
-      <Navbar />
-  
     <Box sx={{backgroundColor:'#E8E8EE'}}>
-      <SignUpCard/>
+
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<SignUpCard/>} />
+        <Route path="/upload/:id" element={<UploadCard/>} />
+      </Routes>
     </Box>
   
   </BrowserRouter>

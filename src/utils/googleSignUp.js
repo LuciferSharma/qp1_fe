@@ -56,7 +56,7 @@ export default function GoogleSignUp(){
         });
 
         console.log("Login success"+ googleData)
-
+        
         const data = await  res.json();
         setLoginData(data);
         localStorage.setItem('loginData', JSON.stringify(data));
