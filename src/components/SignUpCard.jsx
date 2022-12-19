@@ -23,9 +23,7 @@ const SignUpCard = () => (
           >
             <Box component='img' src={Images.imgs.signupImg} 
             sx={{
-                
                 width: 350,
-                
                 }}>
 
             </Box>

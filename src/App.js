@@ -1,6 +1,6 @@
 import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import {Navbar, SignUpCard} from './components';
+import {Navbar, SignUpCard, UploadCard} from './components';
 import {Box,Stack, TextField} from '@mui/material';
 
 const App = () => (
