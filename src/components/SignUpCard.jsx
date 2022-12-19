@@ -1,41 +1,61 @@
-import {Stack, Box,Card, CardHeader,CardMedia,CardContent, CardActions,Typography} from '@mui/material';
+import {Stack,Grid,Paper, Avatar, TextField,Checkbox,Button,FormControlLabel, Box,Card, CardHeader,CardMedia,CardContent, CardActions,Typography} from '@mui/material';
 import {Link} from 'react-router-dom';
 
 import React from 'react'
 import Images from '../utils/constants';
+import signupImg from '../assets/images/signupimg.png'
+import GoogleSignUp from '../utils/googleSignUp';
+import { width } from '@mui/system';
 
 const SignUpCard = () => (
-    <Box height={500} p={20}>
-        <Stack direction="row" alignItems="center" p={20} height="100px" sx={{ 
-        position: 'sticky', background:'#fff',
-         justifyContent: 'space-between'}}>
-        <Box 
-            component="img"
-            src={Images.imgs.signupImg}
-            alt="signup img"
-            sx={{ display:'flex', alignItems:'center' }}>
+    <Stack p={20} width="600px" alignItems="center" >
+        
+        
+        <Grid item xs={12} sm={8} md={5} component={Card} elevation={6} square>
+          <Box
+            sx={{
+              my: 8,
+              mx: 4,
+              display: 'flex',
+              flexDirection: 'row',
+              alignItems: 'center',
+            }}
+          >
+            <Box component='img' src={Images.imgs.signupImg} 
+            sx={{
                 
+                width: 350,
+                
+                }}>
+
             </Box>
-        <Box sx={{ display:'flex', alignItems:'center' }}>
-            <h1>sign up btn</h1>
-        </Box>
+            
+        
+            <Box component="form" noValidate  sx={{ mt: 1 ,p:3 }} alignItems="center" >
+
+              <div position="relative">
+              <GoogleSignUp />
+              </div>
+
+              
+              <Grid container>
+                <Grid item xs>
+                  <Link href="#" variant="body2">
+                    Forgot password?
+                  </Link>
+                </Grid>
+                <Grid item>
+                  <Link href="#" variant="body2">
+                    {"Don't have an account? Sign Up"}
+                  </Link>
+                </Grid>
+              </Grid>
+              
+            </Box>
+          </Box>
+        </Grid>
+      
     </Stack>
-        <Card>
-            <CardContent >
-                <div style={{position: 'relative'}} >
-                <CardMedia component="img" height="500" image={Images.imgs.signupImg} alt="signup img" />      
-            <div style={{
-                          position: 'absolute', 
-                          color: 'white', 
-                          size: '20px',
-                          top: 30, 
-                          left: '50%', 
-                          transform: 'translateX(-50%)'
-                        }} >Your text sadcdsvc</div>
-                        </div>
-            </CardContent>
-        </Card>
-    </Box>
   );
 
 export default SignUpCard
