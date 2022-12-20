@@ -2,6 +2,7 @@ import './App.css';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import {Navbar, SignUpCard, UploadCard} from './components';
 import {Box,Stack, TextField} from '@mui/material';
+import FileUpload from './pages/UploadPage';
 
 const App = () => (
   <BrowserRouter>
@@ -10,7 +11,7 @@ const App = () => (
       <Navbar />
       <Routes>
         <Route path="/" exact element={<SignUpCard/>} />
-        <Route path="/upload/:id" element={<UploadCard/>} />
+        <Route path="/upload/:id" element={<FileUpload/>} />
       </Routes>
     </Box>
   
