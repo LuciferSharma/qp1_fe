@@ -9,6 +9,7 @@
     "@material-ui/core": "^4.12.4",
     "@mui/icons-material": "^5.10.16",
     "@mui/material": "^5.10.17",
+    "aws-sdk": "^2.1282.0",
     "axios": "^1.2.1",
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
@@ -22,8 +23,9 @@
     "react-router-dom": "^6.4.5",
     "react-scripts": "5.0.1"
   },
+
   "scripts": {
-    "start": "react-scripts start",
+    "start": "set PORT=3000 && react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
